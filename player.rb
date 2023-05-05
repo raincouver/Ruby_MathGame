@@ -3,7 +3,7 @@ class Player
 
    @@number_of_players = 0
 
-  def initialize
+  def initialize()
     @@number_of_players += 1
     @name = "Player #{@@number_of_players}"
     @lives = 3
@@ -21,13 +21,13 @@ class Player
 end
 
 
-puts a = Player.new
-puts a.name
-a.lose_life
-a.alive?
-a.lose_life
-a.alive?
-a.lose_life
-a.alive?
-puts b = Player.new
-puts b.name
+# puts a = Player.new
+# puts a.name
+# a.lose_life
+# puts a.alive?
+# a.lose_life
+# puts a.alive?
+# a.lose_life
+# puts a.alive?
+# puts b = Player.new
+# puts b.name
