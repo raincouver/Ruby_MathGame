@@ -8,7 +8,7 @@ class Game
     @player1 = Player.new
     @player2 = Player.new
     @current = self.player1
-    @loser = nil
+    @loser = false
     @question = Question.new
   end
 
@@ -26,7 +26,7 @@ class Game
         puts "#{self.current.name}: Seriously? No!"
         self.current.lose_life
         if !self.current.alive?
-          self.loser = self.current
+          self.loser = true
         end
       end
 
@@ -51,5 +51,4 @@ class Game
 
 end
 
-a = Game.new
-p a.play()
+Game.new().play()
